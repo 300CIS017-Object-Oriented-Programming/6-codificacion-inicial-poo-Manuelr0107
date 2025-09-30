@@ -16,6 +16,7 @@ int main() {
     std::cout << "Que ladre" << std::endl;
     firulais.ladrar();
     firulais.saludar("miercoles");
+    firulais.alimentar();
 
 
     Perro luna;
