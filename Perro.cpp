@@ -23,15 +23,15 @@ void Perro::alimentar() {
         alimento = 1 * edad;
         std::cout << nombre << " debe comer " << alimento << "Kg" << std::endl;
     }
-    if (tamanio == "Mediano") {
+    else if (tamanio == "Mediano") {
         alimento = 0.5 * edad;
         std::cout << nombre << " debe comer " << alimento << "Kg" << std::endl;
     }
-    if (tamanio == "Pequenio") {
+    else if (tamanio == "Pequeno") {
         alimento = 0.25 * edad;
         std::cout << nombre << " debe comer " << alimento << "Kg" << std::endl;
     }
     else {
-        std::cout << "tamaño no valido" << std::endl;
+        std::cout << "tamanio no valido" << std::endl;
     }
 }

@@ -1,9 +1,13 @@
 #include <iostream>
 #include "Perro.h"
 
+
 int main() {
 
-    std::cout << "Hello, World!" << std::endl;
+    std::cout << "Interfaz de la clase perro" << std::endl;
+    Raza mastin("Mastin Napolitano", "Italia");
+    Raza maltes("Maltes" , "Italia");
+
 
     // Instanciar
     Perro firulais;
@@ -11,11 +15,14 @@ int main() {
     firulais.color = "Negro";
     firulais.edad = 5;
     firulais.tamanio = "Grande";
-    firulais.raza = "Mastin napolitano";
+    firulais.raza = mastin;
+    std::cout << firulais.nombre << " es de raza "
+    << firulais.raza.getnombre() << " de "
+    << firulais.raza.getpaisOrigen() <<  std::endl;
 
     std::cout << "Que ladre" << std::endl;
     firulais.ladrar();
-    firulais.saludar("miercoles");
+    firulais.saludar();
     firulais.alimentar();
 
 
@@ -27,6 +34,7 @@ int main() {
 
     std::cout << "Que ladre" << std::endl;
     luna.ladrar();
+    luna.alimentar();
 
     return 0;
 }
