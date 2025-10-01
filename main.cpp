@@ -5,8 +5,12 @@
 int main() {
 
     std::cout << "Interfaz de la clase perro" << std::endl;
+
     Raza mastin("Mastin Napolitano", "Italia");
     Raza maltes("Maltes" , "Italia");
+
+    Veterinario drperez("DrPerez" , 15 );
+    Veterinario drgomez("DrGomez" , 5 );
 
 
     // Instanciar
@@ -16,9 +20,14 @@ int main() {
     firulais.edad = 5;
     firulais.tamanio = "Grande";
     firulais.raza = mastin;
+    firulais.veterinario = drperez;
+
     std::cout << firulais.nombre << " es de raza "
     << firulais.raza.getnombre() << " de "
-    << firulais.raza.getpaisOrigen() <<  std::endl;
+    << firulais.raza.getpaisOrigen() << " su veterinario es "
+    << firulais.veterinario.getnombreVeterinario() << " que cuenta con "
+    << firulais.veterinario.getaniosExperiencia() << " anios de experiencia. " << std::endl;
+
 
     std::cout << "Que ladre" << std::endl;
     firulais.ladrar();
